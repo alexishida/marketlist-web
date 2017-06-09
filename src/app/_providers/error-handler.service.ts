@@ -1,11 +1,10 @@
 import { Injectable } from '@angular/core';
 import swal from 'sweetalert2';
-import {SlimLoadingBarService} from 'ng2-slim-loading-bar';
 
 @Injectable()
 export class ErrorHandlerService {
 
-  constructor(private loading: SlimLoadingBarService) {}
+  constructor() {}
 
   handleError(error: any): void {
     const message = error.message ? error.message : error.toString();
@@ -26,7 +25,6 @@ export class ErrorHandlerService {
     } else {
       swal({title: 'Erro', text: 'Não foi possível concluir a transação. ' + message, type: 'error'});
     }
-    this.loading.complete();
   }
 
 

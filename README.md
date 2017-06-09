@@ -1,6 +1,6 @@
 # MarketlistWeb
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.1.
+This project was built for a talk in Amazon Event Tech 2017.
 
 ## Development server
 
