@@ -65,11 +65,12 @@
       </tr>
       </thead>
       <tbody>
-      <tr *ngFor="let product of products" (click)="update(product)" style="cursor: pointer;">
+      <tr *ngFor="let product of products" style="cursor: pointer;">
         <td [ngStyle]="{'text-decoration': product.found ? 'line-through' : 'none'}">{{product.name}}</td>
         <td [ngStyle]="{'text-decoration': product.found ? 'line-through' : 'none'}">{{product.quantity}}</td>
         <td>
-          <button type="button" class="button is-danger" (click)="create()">Remove</button>
+          <button type="button" class="button is-danger" (click)="destroy(product)">Remove</button>
+          <button type="button" class="button {{product.found ? 'is-danger' : 'is-success'}}" (click)="update(product)">{{product.found ? 'Not Found' : 'Found'}}</button>
         </td>
       </tr>
       </tbody>
